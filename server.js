@@ -15,4 +15,8 @@ app.get('/about', (req, res) => {
   res.render('about', { title: 'about', contents: 'spleen and ideal' })
 })
 
+app.get('/if', (req, res) => {
+  res.render('if', { title: 'if', nam: 'shasame and reproach' })
+})
+
 app.listen(3000)
