@@ -1,0 +1,16 @@
+<h1>Example App: each</h1>
+{{! this basically illustates handlebars logic }}
+
+{{#each guys as |x y|}}
+  <p>{{x}}: {{y}}</p>
+{{/each}}
+
+{{! this was dealing with a single object }}
+
+<p>an array of objects</p>
+{{#each lists}}
+
+  {{#each this.items}}
+    <p>{{this}}</p>
+  {{/each}}
+{{/each}}
