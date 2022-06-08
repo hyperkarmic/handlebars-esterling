@@ -3,8 +3,13 @@ const express = require('express')
 const hbs = require('express-handlebars')
 
 const app = express()
-app.engine('handlebars', hbs.engine({}))
-app.set('view engine', 'handlebars')
+app.engine(
+  'hbs',
+  hbs.engine({
+    extname: '.hbs',
+  })
+)
+app.set('view engine', 'hbs')
 app.set('views', './views')
 
 app.get('/', (req, res) => {
@@ -21,6 +26,10 @@ app.get('/if', (req, res) => {
 
 app.get('/unless', (req, res) => {
   res.render('if', { content: 'if', nam: 'shasame and reproach' })
+})
+
+app.get('/partial', (req, res) => {
+  res.render('partial', { content: 'if', nam: 'shasame and reproach' })
 })
 
 app.listen(3000)
