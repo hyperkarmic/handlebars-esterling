@@ -32,4 +32,11 @@ app.get('/partial', (req, res) => {
   res.render('partial', { content: 'if', nam: 'shasame and reproach' })
 })
 
+app.get('/lookup', (req, res) => {
+  res.render('lookup',user = {
+   user:{content:"screw you"},
+   arr:["mouser","ratter","pigeon poker"]
+  })
+})
+
 app.listen(3000)
